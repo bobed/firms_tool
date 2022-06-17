@@ -1,6 +1,6 @@
 import xml.dom.minidom
-import urllib.request
 import os
+import requests
 
 from xml.dom.minidom import parse
 
@@ -68,7 +68,9 @@ def get_input_files(source_file_directory):
 
 def download_file(url, output_path):
     print('Downloading {0} to {1}'.format(url, output_path))
-    urllib.request.urlretrieve(url, output_path)
+    file = requests.get(url)
+    with open (output_path, "w")  as f:
+        f.write(file.text)
 
 
 def main():
