@@ -8,7 +8,7 @@ KML_SOURCE_DIRECTORY = ".\\"
 KML_OUTPUT_FILE_PREFIX = "filtered"
 DOWNLOAD_FROM_FIRMS = True
 
-
+BOUNDS_LABEL = "Ukraine"
 LOWER_LAT = 45.693156241109214
 UPPER_LAT = 52.44345069237891
 LOWER_LON = 22.43180504054893
@@ -22,10 +22,10 @@ def is_coordinate_in_bounds(raw_coordinate):
     lat = float(coordinates[1])
 
     if lat > LOWER_LAT and lat < UPPER_LAT and lon > LOWER_LON and lon < UPPER_LON:
-        print(coordinate + " in bounds")
+        print("{0} in {1}".format(coordinate, BOUNDS_LABEL))
         return True
 
-    print(coordinate + " not in bounds")
+    print("{0} not in {1}".format(coordinate, BOUNDS_LABEL))
     return False
 
 
