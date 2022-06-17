@@ -34,7 +34,7 @@ def filter_coordinates(input_path):
     file_name = os.path.basename(input_path)
     output_file_name = "{0}_{1}".format(KML_OUTPUT_FILE_PREFIX, file_name)
 
-    print ("Processing {0} to {1}".format(file_name, output_file_name))
+    print("Processing {0} to {1}".format(file_name, output_file_name))
 
     with xml.dom.minidom.parse(input_path) as dom:
         coordinates = dom.documentElement.getElementsByTagName("coordinates")
@@ -96,7 +96,7 @@ def main():
         for input_file in input_files:
             filter_coordinates(input_file)
     else:
-        print ("No KML files to process")
+        print("No KML files to process")
 
     print('Done')
 
