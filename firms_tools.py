@@ -6,7 +6,7 @@ from xml.dom.minidom import parse
 
 FIRMS_DOWNLOAD_URL = ""
 FIRMS_FILE = "MODIS_C6_1_Europe_24h.kml"
-OUTPUT_FILE = "output.xml"
+OUTPUT_FILE = "output.kml"
 LOWER_LAT = 45.693156241109214
 UPPER_LAT = 52.44345069237891
 LOWER_LON = 22.43180504054893
