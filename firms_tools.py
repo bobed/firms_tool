@@ -18,10 +18,10 @@ def is_coordinate_in_bounds(raw_coordinate):
     lat = float(coordinates[1])
 
     if lat > LOWER_LAT and lat < UPPER_LAT and lon > LOWER_LON and lon < UPPER_LON:
-        print (coordinate + " in ukraine")
+        print (coordinate + " in bounds")
         return True
 
-    print (coordinate + " not in ukraine")
+    print (coordinate + " not in bounds")
     return False
 
 def main():
